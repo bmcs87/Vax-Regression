@@ -1,0 +1,2 @@
+mod1 <- lm(Destination_Search ~ State + Vax_Rate + State*Vax_Rate, data = dataset)
+summary(mod1)
