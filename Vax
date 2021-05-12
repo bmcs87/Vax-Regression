@@ -1,2 +1,14 @@
+#grab your file
+dataset <- read.delim('dataset.txt')
+attach(dataset)
+
+#check the class of the data
+class(Destination_Search)
+class(Vax_Rate)
+
+#change class of the data
+Destination_Search <- as.numeric(Destination_Search)
+Vax_Rate <- as.numeric(Vax_Rate)
+
 mod1 <- lm(Destination_Search ~ State + Vax_Rate + State*Vax_Rate, data = dataset)
 summary(mod1)
